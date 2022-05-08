@@ -74,3 +74,5 @@ const thoughtsController = {
         .catch((err) => res.status(500).json({err, message: "Unable to process request due to server issue."}));
     }
 }
+
+module.exports = thoughtsController;
