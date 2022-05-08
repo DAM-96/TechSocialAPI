@@ -1,0 +1,33 @@
+{
+  "name": "techsocialapi",
+  "version": "1.0.0",
+  "description": "TechSocialAPI is a working web API that could be use for a Social Network",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo No tests have been written for the API yet",
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DAM-96/TechSocialAPI.git"
+  },
+  "keywords": [
+    "API",
+    "Social",
+    "Network"
+  ],
+  "author": "Daniel Moreno",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DAM-96/TechSocialAPI/issues"
+  },
+  "homepage": "https://github.com/DAM-96/TechSocialAPI#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
