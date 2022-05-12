@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo No tests have been written for the API yet",
     "start": "node server",
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "seed": "node seeds/seed"
   },
   "repository": {
     "type": "git",

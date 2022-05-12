@@ -17,7 +17,14 @@ const usersControllers = {
 
     // Create a new user
     createUser(req, res) {
-        User.create(req.body).then((user) => res.json(user))
+
+        // Input should look something like this
+        // {
+        //     "userName": "Username",
+        //     "email": "email@domain.com"
+        // }
+
+        Users.create(req.body).then((user) => res.json(user))
         .catch((err) => res.status(500).json({err, message: "Unable to process request due to server issue."}));
     },
 

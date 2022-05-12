@@ -18,6 +18,14 @@ const thoughtsController = {
 
     // Create a new thought
     createThought(req, res) {
+
+        //  Input should look something like this
+        // {
+        //     "thoughtContents": "Thought Contents",
+        //     "thoughtAuthor": "Username",
+        //     "userId": "User ID"
+        // }
+
         Thoughts.create(req.body).then((thought) => {
             return Users.findOneAndUpdate(
                 { 
@@ -34,7 +42,7 @@ const thoughtsController = {
                 }
             ).then( (user) => {
                 !user ? res.status(404).json({thought, message: "Unable to locate the specified user for the thougth that was created. Thought created without user"}) : res.json({ thought, message:"Thougth successfully created"})
-            }).catch((err) => res.status(500).json({err, message: "Unable to process request due to server issue."}));
+            })//.catch((err) => res.status(500).json({err, message: "Unable to process request due to server issue."}));
         });
     },
 
